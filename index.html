@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="stylesheet.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="../package/swiper-bundle.min.css">
+    <title>fruitsdeliveryshop</title>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  </head>
+  <style>
+    #responsive-img {
+      height: auto;
+      width: 10vw;
+    }
+    html,
+    body {
+      position: relative;
+      height: 100%;
+    }
+
+    body {
+      background: #fff;
+      font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+      font-size: 14px;
+      color: #000;
+      margin: 0;
+      padding: 0;
+    }
+    .swiper-container {
+      width: 70%;
+      height: 70%;
+      padding: 20px;
+    }
+
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #fff;
+
+      /* Center slide text vertically */
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      -webkit-justify-content: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      align-items: center;
+    }
+  </style>
+  <body>
+    <div id="header">
+      <h1><a href="index.html"><img id="corridor" src="img/brooke-lark-atzWFItRHy8-unsplash.jpg" 
+            alt="" /></a></h1>
+    </div>
+    <div id="wrapper">
+      <div id="nav">
+        <ul>
+          <li><a href="#">カートを見る</a></li>
+          <li><a href="#">購入履歴</a></li>
+          <li><a href="#">ヘルプ</a></li>
+        </ul>
+      </div>
+      <div id="example">
+        <div id="container">
+          <div id="main">
+            <div class="post">
+              <p><strong>農家より直接配送する
+                <br>新鮮なフルーツをあなたのお家に！</br></strong>
+              </p>
+            </div>
+            <div class="post clearfix">
+              <h2>青森県産リンゴ</h2>
+              <img class="left"
+                src="img/an_vision-gDPaDDy6_WE-unsplash.jpg"
+                id="responsive-img"
+                alt=""
+              />
+              <p>
+                青森から産地直送でお届けします！
+                無農薬栽培で育った有名品種です。
+              </p>
+              <p><a href="#">→詳細を表示する</a></p>
+              <input type="button" value="カートに追加" 
+              onclick="sample(event)"
+              data-target-id="item1">
+              <span id="item1">0</span>
+            </div>
+            <div class="post clearfix">
+              <h2>植木産スイカ</h2>
+              <img class="left" 
+              src="img/mockup-graphics-HuMXepbutF8-unsplash.jpg" 
+              id="responsive-img"
+              alt="" />
+              <p>
+                熊本県植木で収穫したスイカです。
+                みずみずしい甘さが特徴です！
+              </p>
+              <p><a href="#">→詳細を表示する</a></p>
+              <input type="button" value="カートに追加" 
+              onclick="sample(event)"
+              data-target-id ="item2">
+              <span id="item2">0</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="side">
+      <div class="box">
+        <h2>👑売上ランキング👑</h2>
+        <div class="boxBody">
+          <ul>
+            <li>①　沖縄産バナナ</li>
+            <li>②　日向産マンゴー</li>
+            <li>③　栃木産イチゴ</li>
+          </ul>
+        </div>
+      </div>
+      <div class="box">
+        <h2>☆お客様レビュー☆</h2>
+        <div class="boxBody">
+          <ul>
+            <li>
+              <h3>Aさん（福岡市・30代）</h3>
+                <p>色つやがとても良い。</p>
+            </li>
+            <li>
+              <h3>Fさん（東京都・50代）</h3>
+                <p>すぐに届いて便利！</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+     <!-- Swiper -->
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="img/avinash-kumar-TIGDsyy0TK4-unsplash.jpg"></div>
+        <div class="swiper-slide"><img src="img/giorgio-trovato-fczCr7MdE7U-unsplash.jpg"></div>
+        <div class="swiper-slide"><img src="img/xiazheng1995-8swnkLFNIxo-unsplash.jpg"></div>
+      </div>
+      <!-- Add Pagination -->
+      <div class="swiper-pagination"></div>
+      <!-- Add Arrows -->
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+    </div>
+    <div id="footer">
+      <p>&copy; 2020 WA All Rights Reserved.</p>
+    </div>
+    <script>
+      function sample(event) {
+        const targetId = event.target.dataset.targetId;
+        const target = document.getElementById(targetId);
+        let count = target.innerHTML;
+        count++;
+        target.innerHTML = count;
+      }
+        // function sampleCountUp(event) {
+        // let target = event.target.parentNode.children[2];
+        // let count = target.innerHTML;
+        // count++;
+        // target.innerHTML = count;
+        // }
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script type="module">
+      import Swiper from 'https://unpkg.com/swiper/swiper-bundle.esm.browser.min.js'
+    
+      const swiper = new Swiper()
+    </script>
+    <!-- Swiper JS -->
+    
+
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper('.swiper-container', {
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+        loop: true,
+        autoplay: {
+          delay: 3000,
+          disableOnInteraction: true
+        },
+        slidesPerView: 2,
+        centeredSlides : true
+      });
+    </script>
+  </body>
+</html>
